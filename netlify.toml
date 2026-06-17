@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/idea"
+  to = "/product-idea-to-design-brief/"
+  status = 301
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin-checklist/"
+  status = 301
+
+[[redirects]]
+  from = "/shop"
+  to = "https://sapiverpress.etsy.com?coupon=SAVE20"
+  status = 302
