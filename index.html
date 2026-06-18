@@ -1,27 +1,146 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sapiver Press Creator Tools</title>
-<meta name="description" content="Sapiver Press planning tool and paid creative product resources.">
-<meta name="robots" content="index,follow">
-<style>
-:root{--ink:#18231f;--muted:#5d6b65;--paper:#f7f1e6;--panel:#fffdf8;--soft:#efe6d7;--green:#0f4d36;--green2:#1d684d;--gold:#c98f2f;--line:#ded4c2;--shadow:0 14px 34px rgba(24,35,31,.10)}
-*{box-sizing:border-box}body{margin:0;font-family:Georgia,'Times New Roman',serif;color:var(--ink);background:var(--paper);line-height:1.6}a{color:var(--green2);font-weight:700}.topbar{background:var(--green);color:#fff;font:700 13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:14px 22px}.wrap{max-width:1080px;margin:0 auto;padding:30px 18px 60px}header,.card,section{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:var(--shadow);margin-top:18px}header{background:linear-gradient(135deg,#fff 0%,#f4ead9 100%)}.eyebrow{color:var(--green);font:700 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}h1{font-size:clamp(34px,6vw,62px);line-height:1.02;margin:0 0 16px;letter-spacing:-.025em}h2{font-size:28px;line-height:1.16;margin:0 0 10px;color:var(--green)}.subtitle{font-size:21px;color:var(--muted);max-width:850px;margin:0 0 18px}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.btn{display:inline-flex;align-items:center;justify-content:center;font:700 15px Arial,sans-serif;text-decoration:none;border-radius:999px;padding:13px 18px;border:2px solid var(--green);line-height:1.2}.primary{background:var(--green);color:#fff}.secondary{background:transparent;color:var(--green)}.gold{background:var(--gold);border-color:var(--gold);color:#332004}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.mini{font:13px Arial,sans-serif;color:var(--muted)}.tag{display:inline-block;background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:6px 10px;margin:4px;font:700 12px Arial,sans-serif;color:#33483d}footer{text-align:center;color:var(--muted);font:13px Arial,sans-serif;margin-top:30px}@media(max-width:850px){.grid{grid-template-columns:1fr}}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Idea to Design Brief v1.12 | Sapiver Press</title>
+  <meta name="description" content="A Sapiver Press idea planner that asks for a rough idea, 5W context, preferences and product history, then suggests the best product type, platform route, files to build and deployment stage.">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="product-idea-to-design-brief/app.css">
 </head>
-<body><div class="topbar">Sapiver Press - Creator Tools</div><main class="wrap">
-<header>
-  <div class="eyebrow">Public planning tool · paid tools behind the shop</div>
-  <h1>Turn a product idea into the right build route.</h1>
-  <p class="subtitle">Use the public planning tool to diagnose what you are making, then move toward the paid Sapiver Press tools that help build, organise and launch it.</p>
-  <div class="buttons"><a class="btn primary" href="/product-idea-to-design-brief/">Start the planning tool</a><a class="btn secondary" href="/paid-tools/">See paid tools</a><a class="btn gold" href="https://sapiverpress.etsy.com?coupon=SAVE20">Shop with SAVE20</a><a class="btn secondary" href="https://suite.sapiverpress.co.uk">Back to Suite</a></div>
-</header>
-<section><h2>The funnel</h2><span class="tag">Idea</span><span class="tag">5W check</span><span class="tag">Route diagnosis</span><span class="tag">File-format suggestion</span><span class="tag">Paid build tool</span><span class="tag">Suite loop-back</span></section>
-<div class="grid">
-  <article class="card"><h2>Entry planning tool</h2><p>Product Idea to Design Brief helps creators work out what they are making before opening design software or choosing file specs.</p><div class="buttons"><a class="btn primary" href="/product-idea-to-design-brief/">Open planning tool</a></div></article>
-  <article class="card"><h2>Paid tools</h2><p>The second-stage HTML tools are positioned as one-off purchases or future subscription resources. They are not stored in this public repo.</p><div class="buttons"><a class="btn secondary" href="/paid-tools/">See locked tools</a></div></article>
-  <article class="card"><h2>Shop route</h2><p>All paid CTAs point to the Sapiver Press Etsy shop with the SAVE20 coupon link.</p><div class="buttons"><a class="btn gold" href="https://sapiverpress.etsy.com?coupon=SAVE20">Browse with SAVE20</a></div></article>
-</div>
-<footer><a href="/">Creator Tools home</a> · <a href="/product-idea-to-design-brief/">Planning tool</a> · <a href="https://sapiverpress.etsy.com?coupon=SAVE20">Sapiver Press Etsy - SAVE20</a> · <a href="https://suite.sapiverpress.co.uk">Sapiver Suite</a></footer></main></body></html>
+<body>
+  <div class="topbar">Sapiver Press - Free Creator Tool</div>
+  <main class="wrap">
+    <header class="hero">
+      <div class="eyebrow">From rough idea to recommended route</div>
+      <h1>Product Idea to Design Brief <span style="font-size:.35em;letter-spacing:0;vertical-align:middle">v1.12</span></h1>
+      <p class="subtitle">Give the tool a vague product idea and a simple who, what, where, when and why. The tool then suggests the best product type, platform route, files to build and deployment stage.</p>
+      <div class="callout success"><strong>Core rule:</strong> the customer should not need to know whether their idea is a KDP book, Etsy download, website tool, printable, app or POD item. The tool works that out from the answers.</div>
+      <div class="buttons">
+        <a class="btn primary" href="#planner">Start planner</a>
+        <a class="btn secondary" href="#result">Jump to recommendation</a>
+        <button class="btn secondary" type="button" onclick="window.print()">Print / save as PDF</button>
+      </div>
+    </header>
+
+    <div class="grid">
+      <div id="planner">
+        <section id="idea">
+          <h2>1. The idea</h2>
+          <p>Capture the raw idea. It can be messy. The recommendation engine will turn it into a product route later.</p>
+          <div class="formgrid">
+            <div style="grid-column:1/-1"><label for="ideaText">Rough idea</label><textarea id="ideaText" placeholder="Example: a simple tracker for people planning their first self-published puzzle book"></textarea></div>
+            <div><label for="ideaSource">Where did the idea come from?</label><textarea id="ideaSource" placeholder="Example: a problem I had, a question people keep asking, a gap I noticed, a seasonal need"></textarea></div>
+            <div><label for="currentMess">What feels unclear or messy?</label><textarea id="currentMess" placeholder="Example: I do not know whether it should be a printable, guide, app, website or book"></textarea></div>
+          </div>
+          <div class="callout danger"><strong>Do not choose the platform yet.</strong> Answer the idea questions first. The recommendation will choose the likely route.</div>
+        </section>
+
+        <section id="fivew">
+          <h2>2. The 5W check</h2>
+          <p>These are customer-friendly questions. They describe the idea, not the final file format.</p>
+          <div class="formgrid">
+            <div><label for="who">Who is it for?</label><textarea id="who" placeholder="Example: first-time indie publishers, teachers, parents, puzzle fans, Etsy beginners"></textarea></div>
+            <div><label for="whatHelp">What would it help them do?</label><textarea id="whatHelp" placeholder="Example: plan, learn, relax, track progress, avoid mistakes, practise something, make a decision"></textarea></div>
+            <div><label for="whereUsed">Where would they use it?</label><textarea id="whereUsed" placeholder="Example: at home, in a classroom, at a desk, on a phone, while uploading, while designing, while travelling"></textarea></div>
+            <div><label for="whenUse">When would they use it?</label><textarea id="whenUse" placeholder="Example: before publishing, during a lesson, every morning, at the weekend, after buying a file"></textarea></div>
+            <div style="grid-column:1/-1"><label for="whyCare">Why would they care?</label><textarea id="whyCare" placeholder="Example: saves time, removes confusion, entertains, helps them relax, makes a task easier, gives them confidence"></textarea></div>
+          </div>
+        </section>
+
+        <section id="useSignals">
+          <h2>3. Use signals</h2>
+          <p>These signals help the tool decide whether the idea is probably a book, printable, website, app, POD design, worksheet, game or download pack.</p>
+          <div class="formgrid">
+            <div><label for="useMode">How will it mostly be used?</label><select id="useMode"><option value="">Choose...</option><option>Printed on paper</option><option>Read as a guide</option><option>Filled in or written on</option><option>Used on a phone or screen</option><option>Played as a game</option><option>Displayed as artwork</option><option>Used as a repeatable workflow</option><option>Not sure yet</option></select></div>
+            <div><label for="buyerAction">What does the user do with it?</label><select id="buyerAction"><option value="">Choose...</option><option>Print it</option><option>Read it</option><option>Write in it</option><option>Upload it somewhere</option><option>Play it</option><option>Display it</option><option>Use it interactively</option><option>Download and keep files</option><option>Not sure yet</option></select></div>
+            <div><label for="complexity">How complex is the first version?</label><select id="complexity"><option value="">Choose...</option><option>One page / very small</option><option>Several pages</option><option>Full guide or workbook</option><option>Many files or bundle</option><option>Interactive tool</option><option>Artwork/design set</option><option>Not sure yet</option></select></div>
+            <div><label for="repeatNeed">Does it need repeatable versions?</label><select id="repeatNeed"><option value="">Choose...</option><option>No, one finished item is enough</option><option>Maybe later</option><option>Yes, it needs variants or volumes</option><option>Yes, it needs automation/generation</option><option>Not sure yet</option></select></div>
+            <div><label for="printNeed">Does it need printing?</label><select id="printNeed"><option value="">Choose...</option><option>No</option><option>Home printing</option><option>Professional print / book print</option><option>POD / merchandise print</option><option>Not sure yet</option></select></div>
+            <div><label for="phoneNeed">Does it need to work on phone?</label><select id="phoneNeed"><option value="">Choose...</option><option>No</option><option>Helpful but not essential</option><option>Yes, phone-first</option><option>Not sure yet</option></select></div>
+          </div>
+        </section>
+
+        <section id="value">
+          <h2>4. Value test</h2>
+          <div class="checks">
+            <label><input type="checkbox" id="valEntertainment"> Entertainment / fun</label>
+            <label><input type="checkbox" id="valRelaxing"> Relaxing / screen-free</label>
+            <label><input type="checkbox" id="valProblem"> Solves a problem</label>
+            <label><input type="checkbox" id="valEducation"> Educational / teaching</label>
+            <label><input type="checkbox" id="valPractical"> Practical / time-saving</label>
+            <label><input type="checkbox" id="valGift"> Giftable / attractive</label>
+          </div>
+          <div style="margin-top:14px"><label for="valueSentence">One-sentence value</label><textarea id="valueSentence" placeholder="Example: It helps a new publisher decide what to build before they waste time making the wrong file."></textarea></div>
+        </section>
+
+        <section id="niche">
+          <h2>5. Niche and audience clues</h2>
+          <div class="formgrid">
+            <div><label for="nicheText">Niche or topic</label><textarea id="nicheText"></textarea></div>
+            <div><label for="audienceText">More specific audience</label><textarea id="audienceText"></textarea></div>
+            <div style="grid-column:1/-1"><label for="researchNotes">Similar products / audience notes</label><textarea id="researchNotes"></textarea></div>
+          </div>
+        </section>
+
+        <section id="history">
+          <h2>6. Preference and product history</h2>
+          <div class="formgrid">
+            <div><label for="pastProducts">What have you made before?</label><textarea id="pastProducts" placeholder="Example: I made a Canva planner but have not sold anything yet"></textarea></div>
+            <div><label for="pastPlatforms">Where have you sold or shared before?</label><textarea id="pastPlatforms" placeholder="Example: I tried Etsy but sold nothing"></textarea></div>
+            <div><label for="preferredMaking">What do you prefer making?</label><select id="preferredMaking"><option value="">Choose...</option><option>Writing guides or instructions</option><option>Printable PDFs</option><option>Books or workbooks</option><option>Worksheets / teaching resources</option><option>Artwork or visual products</option><option>Interactive tools / web apps</option><option>Games or cards</option><option>Simple one-page resources</option><option>Not sure yet</option></select></div>
+            <div><label for="avoidMaking">What do you want to avoid?</label><select id="avoidMaking"><option value="">Choose...</option><option>Too much writing</option><option>Complex design work</option><option>Technical website/app setup</option><option>Print formatting</option><option>Customer file support</option><option>Physical fulfilment</option><option>Large projects</option><option>Not sure yet</option></select></div>
+            <div><label for="existingFiles">What do you already have?</label><select id="existingFiles"><option value="">Choose...</option><option>Only the idea</option><option>Notes or outline</option><option>Text/content drafted</option><option>Images/artwork ready</option><option>Puzzle/data/content files ready</option><option>A rough Canva/design file</option><option>A working HTML/app file</option><option>Not sure yet</option></select></div>
+            <div><label for="timeBudget">Time for first version?</label><select id="timeBudget"><option value="">Choose...</option><option>Under 1 hour</option><option>A few hours</option><option>A weekend</option><option>A few weeks</option><option>Ongoing project</option><option>Not sure yet</option></select></div>
+          </div>
+        </section>
+
+        <section id="design">
+          <h2>7. Design direction</h2>
+          <div class="formgrid">
+            <div><label for="styleTone">Style/tone</label><select id="styleTone"><option value="">Choose...</option><option>Clean and practical</option><option>Premium and editorial</option><option>Playful and colourful</option><option>Calm and relaxing</option><option>Educational and structured</option><option>Bold social-first</option></select></div>
+            <div><label for="projectName">Project/folder name</label><input id="projectName" placeholder="Example: First_Product_Route_Test"></div>
+            <div><label for="mustInclude">Must include</label><textarea id="mustInclude"></textarea></div>
+            <div><label for="mustAvoid">Must avoid</label><textarea id="mustAvoid"></textarea></div>
+            <div style="grid-column:1/-1"><label for="firstBuild">What should the first test build prove?</label><textarea id="firstBuild"></textarea></div>
+          </div>
+          <div class="buttons">
+            <button class="btn primary" type="button" onclick="generateRecommendation(true)">Generate recommendation</button>
+            <button class="btn secondary" type="button" onclick="clearAll()">Clear form</button>
+          </div>
+        </section>
+      </div>
+
+      <aside class="sticky" id="result">
+        <div class="card">
+          <h2>Recommendation</h2>
+          <p class="mini">The customer gives the idea. The tool recommends the route.</p>
+          <div class="progressbox"><div class="progressbar" id="progressbar"></div></div>
+          <div class="mini" id="progressText">0% complete</div>
+          <div class="result"><h3>Suggested product type</h3><div id="productOut"><span class="tag">Waiting for idea</span></div></div>
+          <div class="result"><h3>Why this recommendation</h3><div id="whyOut" class="mini">Waiting for answers.</div></div>
+          <div class="result"><h3>Ambiguity check</h3><p id="ambiguityOut" class="mini">Waiting for answers.</p></div>
+          <div class="result"><h3>Suggested platform / deployment route</h3><div id="platformOut"><span class="tag">Waiting for answers</span></div></div>
+          <div class="result"><h3>Route options</h3><div id="tiersOut"><span class="tag">Waiting</span></div></div>
+          <div class="result"><h3>Recommended support level</h3><div id="supportOut"><span class="tag">Waiting</span></div></div>
+          <div class="result"><h3>Files to build</h3><div id="filesOut"><span class="tag">Waiting</span></div></div>
+          <div class="result"><h3>Suggested size / specs</h3><div id="specsOut"><span class="tag">Waiting</span></div></div>
+          <div class="result"><h3>Deployment stage</h3><p id="stageOut" class="mini">Waiting.</p></div>
+          <div class="result"><h3>Confidence</h3><div id="confidenceOut"><span class="tag">Waiting</span></div></div>
+          <div class="result"><h3>Preference/history fit</h3><p id="preferenceOut" class="mini">Waiting.</p></div>
+          <div class="result"><h3>Next action</h3><p id="nextOut" class="mini">Waiting.</p></div>
+          <div class="buttons"><button class="btn primary" onclick="copyBrief()">Copy brief</button><button class="btn secondary" onclick="downloadText()">Download TXT</button><button class="btn secondary" onclick="downloadJSON()">Export JSON</button><button class="btn secondary" onclick="document.getElementById('importFile').click()">Import JSON</button><input id="importFile" type="file" accept="application/json,.json" style="display:none" onchange="importJSON(event)"></div>
+        </div>
+        <div class="card"><h2>Generated design brief</h2><div class="output" id="briefOut">Complete the planner to generate a recommendation.</div></div>
+      </aside>
+    </div>
+
+    <section><h2>What this tool decides</h2><table><tr><th>Customer gives</th><th>Tool recommends</th></tr><tr><td>Idea, 5W, history, preference and use signals.</td><td>Product route, platform route, files, support level and next step.</td></tr></table></section>
+    <footer>Sapiver Press - Product Idea to Design Brief v1.12</footer>
+  </main>
+  <script src="product-idea-to-design-brief/app-utils.js"></script>
+  <script src="product-idea-to-design-brief/app-routes.js"></script>
+  <script src="product-idea-to-design-brief/app-support.js"></script>
+  <script src="product-idea-to-design-brief/app-main.js"></script>
+</body>
+</html>
